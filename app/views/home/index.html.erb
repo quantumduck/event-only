@@ -8,7 +8,7 @@
 <tr>
   <td>
   <% @locations.each do |current_location| %>
-    <%= render 'locations/single_location', location: current_location %>
+    <%= render 'locations/single_location', location: current_location, single: false %>
   <% end %>
 </td>
 <td>

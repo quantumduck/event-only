@@ -1,7 +1,28 @@
+<table>
 
-<p>
-  <%= link_to 'View Locations', locations_path %>
-</p>
-<p>
-  <%= link_to 'Events', events_path %>
-</p>
+
+<tr>
+  <th><%= link_to 'View Locations', locations_path %>
+  <th><%= link_to 'Events', events_path %></th>
+</tr>
+<tr>
+  <td>
+  <% @locations.each do |current_location| %>
+    <%= render 'locations/single_location', location: current_location %>
+  <% end %>
+</td>
+<td>
+  <table>
+    <tr>
+      <th>Event</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @events.each do |event| %>
+      <%= render 'events/event', event: event %>
+    <% end %>
+</td>
+</tr>
+</table>

@@ -6,4 +6,5 @@
 
 <% @locations.each do |current_location| %>
   <%= render partial:'single_location', locals: {location: current_location, single: false} %>
+  <%= render 'location_form', location: current_location %>
 <% end %>

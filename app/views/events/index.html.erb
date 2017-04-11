@@ -1,1 +1,19 @@
-events#index page
+<h1>Events</h1>
+
+<%= link_to 'Make a new event!', new_event_path %>
+
+<br>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @events.each do |event| %>
+    <%= render 'event', event: event %>
+  <% end %>
+  
+</table>

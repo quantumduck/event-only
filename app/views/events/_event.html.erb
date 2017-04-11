@@ -1,0 +1,6 @@
+<tr>
+  <td><%= link_to "#{event.name}", event_path(event) %></td>
+  <td><%= event.date %></td>
+  <td><%= link_to "Edit", edit_event_path(event) %></td>
+  <td><%= link_to "Delete", event, method: :delete, data: { confirm: "Are you sure?" } %></td>
+</tr>
